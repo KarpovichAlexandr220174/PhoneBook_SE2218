@@ -36,7 +36,7 @@ func SaveUser(user User) error {
 }
 
 func GetUser(emailOrUsername string) (User, error) {
-	// Подключаемся к базе данных
+	// Подключаем к базе данных
 	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI("mongodb://localhost:27017"))
 	if err != nil {
 		return User{}, err
